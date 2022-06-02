@@ -14,10 +14,9 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                script{
-                   
-                    sh 'docker build -t webapp:$BUILD_NUMBER .'
-                    dockerImage= "webapp:$BUILD_NUMBER"
+                script
+                       {
+                    dockerImage= docker.build registry + ":$BUILD_NUMBER"
                 } 
             }
         }
