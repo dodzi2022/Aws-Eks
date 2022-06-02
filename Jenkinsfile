@@ -15,9 +15,8 @@ pipeline {
         stage('Build Image') {
             steps {
                 script{
-                    
-                    
-                    sh 'docker build -t webapp:1.0 .'
+                   
+                    sh 'docker build -t webapp:+ ":$BUILD_NUMBER" .'
                 } 
             }
         }
