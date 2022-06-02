@@ -15,7 +15,9 @@ pipeline {
         stage('Build Image') {
             steps {
                 script{
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    ## dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    
+                    sh 'docker build -t webapp:1.0 .'
                 } 
             }
         }
