@@ -7,6 +7,11 @@ pipeline {
     dockerimage = ''
   }
     stages {
+        stage('Checkout'){
+            steps{
+                git branch: 'main', url: 'https://github.com/dodzi2022/Aws-Eks.git'
+            }
+        }
         stage('Build Image') {
             steps {
                 script{
