@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script{
                    
-                    sh 'docker build -t webapp+:$BUILD_NUMBER .'
+                    sh 'docker build -t webapp:$BUILD_NUMBER .'
                 } 
             }
         }
