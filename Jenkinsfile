@@ -17,6 +17,7 @@ pipeline {
                 script{
                    
                     sh 'docker build -t webapp:$BUILD_NUMBER .'
+                    dockerImage= webapp:$BUILD_NUMBER
                 } 
             }
         }
