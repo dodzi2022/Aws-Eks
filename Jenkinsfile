@@ -6,7 +6,7 @@ pipeline {
     registryCredential = 'jenkins-ecr'
     dockerimage = ''
   }
-    
+    stages {
         stage('Build Image') {
             steps {
                 script{
